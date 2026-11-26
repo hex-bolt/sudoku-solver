@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f5f9;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #202b45;
+}
+
+#sudoku-board {
+    display: grid;
+    grid-template-columns: repeat(9, 45px);
+    grid-template-rows: repeat(9, 45px);
+    justify-content: center;
+    margin: 20px auto;
+    width: fit-content;
+    border: 3px solid #202b45;
+}
+
+.cell {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #aaa;
+    text-align: center;
+    font-size: 20px;
+    background: white;
+    outline: none;
+}
+
+/* Separate the 3x3 boxes */
+
+.cell:nth-child(3n) {
+    border-right: 3px solid #202b45;
+}
+
+.cell:nth-child(n+19):nth-child(-n+27),
+.cell:nth-child(n+46):nth-child(-n+54) {
+    border-bottom: 3px solid #202b45;
+}
+
+.cell:focus {
+    background: #dceaff;
+}
+
+.controls {
+    margin: 20px;
+}
+
+button {
+    padding: 10px 16px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background: #263c65;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #4169a1;
+}
+
+#status {
+    font-weight: bold;
+}
+.cell.selected {
+    background-color: #ffd76a;
+}
+.cell.related {
+    background-color: #dceaff;
+}
+/* Cell where the solver is currently working */
+.cell.solving {
+    background-color: #ffe082;
+    border: 2px solid #e09b00;
+}
+
+.cell.solving.correct {
+    background-color: #c8e6c9;
+}
+
+.cell.solving.backtracked {
+    background-color: #ffcdd2;
+}

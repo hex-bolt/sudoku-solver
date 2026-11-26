@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku DMS Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Sudoku Solver & DMS Visualizer</h1>
+        <p>Explore Discrete Mathematics through Sudoku</p>
+    </header>
+
+    <main>
+
+        <section class="game-section">
+
+            <div id="sudoku-board"></div>
+
+            <div class="controls">
+                <button id="validate-btn">Validate</button>
+                <button id="candidates-btn">Show Candidates</button>
+                <button id="solve-btn">Solve</button>
+                <button id="step-btn">Next Step</button>
+                <button id="previous-btn">Previous Step</button>
+                <button id="reset-btn">Reset</button>
+            </div>
+
+            <p id="status">Enter your Sudoku puzzle.</p>
+
+        </section>
+
+    </main>
+    <script src="js/logic.js"></script>
+    <script src="js/relations.js"></script>
+    <script src="js/sets.js"></script>
+    <script src="js/sudoku.js"></script>
+    <script src="js/solver.js"></script>
+    <script src="js/main.js"></script>
+    
+
+</body>
+</html>
